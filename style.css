@@ -1,0 +1,144 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap; /* Allows the sidebar and content to stack on smaller screens */
+  width: 100%;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 25%;
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-right: 2px solid #ccc;
+  box-sizing: border-box; /* Ensures padding doesn't affect the width */
+}
+
+.sidebar h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 15px;
+  font-size: 1.1em;
+  line-height: 1.5;
+}
+
+.sidebar .menu-btn {
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  margin-bottom: 20px;
+  display: none; /* Initially hidden, used for mobile navigation */
+}
+
+.content {
+  width: 75%;
+  background-color: #002855;
+  color: white;
+  padding: 40px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.profile {
+  margin-bottom: 30px;
+}
+
+.profile img {
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.bio h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.bio p {
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+.read-more-btn {
+  background-color: #ff4500;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.read-more-btn:hover {
+  background-color: #ff6347;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 0;
+  }
+
+  .sidebar .menu-btn {
+    display: block; /* Show the menu button for smaller screens */
+  }
+
+  .content {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .profile img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .bio h1 {
+    font-size: 2em;
+  }
+
+  .bio p {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .bio h1 {
+    font-size: 1.5em;
+  }
+
+  .profile img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .bio p {
+    font-size: 0.9em;
+  }
+
+  .read-more-btn {
+    padding: 10px 20px;
+    font-size: 0.9em;
+  }
+}
